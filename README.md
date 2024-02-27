@@ -9,6 +9,7 @@ Blog Features: Basic blog functionalities such as posting articles, commenting, 
 Learning Curve: With each commit, you'll see the evolution of my coding practices and Django mastery.
 Experiments: From time to time, I'll be trying out new features and techniques, which means there will be some experimental code.
 Learning Goals
+
 ***Through this project, I aim to:***
 
 Master the Django framework from models to views to templates.
