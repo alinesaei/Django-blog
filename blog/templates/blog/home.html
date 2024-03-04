@@ -1,9 +1,18 @@
 {% extends "blog/base.html" %}
 {% block content%}
-    <h1>Hey it's a blog</h1>
+<div class="blog-header">
+    <h1>Welcome to the Blog</h1>
+</div>
+
+<div class="blog-posts">
     {% for post in posts %}
-        <h1>{{ post.title }}</h1>
-        <p>By {{post.author}} on {{post.date_posted}}</p>
-        <p>{{post.content}}</p>
+    <div class="post">
+        <h2 class="post-title">{{ post.title }}</h2>
+        <p class="post-meta">By {{ post.author }} on {{ post.date_posted }}</p>
+        <div class="post-content">
+            {{ post.content|linebreaksbr }}
+        </div>
+    </div>
     {% endfor %}
+</div>
 {% endblock content %}
