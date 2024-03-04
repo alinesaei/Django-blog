@@ -8,4 +8,7 @@ class Post(models.Model):
     # on_delete because if the user created the post and then if the user is delted the post should be deleted
     author = models.ForeignKey(User, on_delete=models.CASCADE)
 
+    def __str__(self):
+        return self.title
+
 
