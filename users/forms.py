@@ -7,5 +7,6 @@ class UserRegisterForm(UserCreationForm):
     email = forms.EmailField()
 
     class Meta:
+        # It gives us a nested namespace for configurations and keeps the config
         model = User
         fields = ['username', 'email', 'password1', 'password2']
