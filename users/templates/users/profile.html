@@ -1,13 +1,13 @@
 {% extends "blog/base.html" %}
 {% load crispy_forms_tags %}
-{% block content%}
-<div>
-   <div class="media" style="display: flex; align-items: center; gap: 20px; padding: 20px;">
-       <img class="rounded-circle account-img" src="{{ user.profile.image.url }}" alt="User Image" style="width: 100px; height: 100px; object-fit: cover; border-radius: 50%;">
-       <div class="media-body">
-           <h2 class="account-heading" style="margin: 0; font-size: 24px;">{{ user.username }}</h2>
-           <p class="text-secondary" style="color: #6c757d;">{{ user.email }}</p>
-       </div>
-   </div>
+{% block content %}
+<div class="content-section">
+    <div class="media">
+        <img class="rounded-circle account-img" src="{{ user.profile.image.url }}" alt="User Image">
+        <div class="media-body">
+            <h2 class="account-heading">{{ user.username }}</h2>
+            <p class="text-secondary">{{ user.email }}</p>
+        </div>
+    </div>
 </div>
 {% endblock content %}
