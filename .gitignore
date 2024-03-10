@@ -9,6 +9,8 @@ env/
 local_*.py
 db.sqlite3
 
+*.jpg
+*.png
 # Distribution / packaging
 .Python
 build/

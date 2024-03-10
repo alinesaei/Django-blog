@@ -25,8 +25,22 @@ def customLogout(request):
 
 @login_required   
 def profile(request):
-    u_form = UserUpdateForm()
-    p_form = ProfilUpdateForm()
+    if request.method == 'POST':
+        u_form = UserUpdateForm(request.POST,
+                                instance=request.user)
+        
+        p_form = ProfilUpdateForm(request.POST, 
+                                  request.FILES,
+                                  instance=request.user.profile)
+        if u_form.is_valid() and p_form.is_valid():
+            u_form.save()
+            p_form.save()
+            username = u_form.cleaned_data.get('username')
+            messages.success(request, f'Account Updated for {username}!')
+            return redirect('profile')
+    else:
+        u_form = UserUpdateForm(instance=request.user)
+        p_form = ProfilUpdateForm(instance=request.user.profile)
 
     context = {
         'u_form': u_form,
