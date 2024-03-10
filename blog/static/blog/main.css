@@ -44,7 +44,7 @@ body {
     max-width: 960px; /* Max width for content readability */
 }
 
-.about-section, .blog-header, .blog-posts {
+.about-section, .blog-posts {
     margin: 20px auto; /* Center these sections for consistency */
     max-width: 960px; /* Consistent max width for readability */
 }
@@ -58,6 +58,11 @@ body {
 .blog-header h1 {
     font-size: 2.5rem; /* Slightly smaller for balance */
     margin-bottom: 1rem; /* Reduced bottom margin for tighter spacing */
+    text-align: center;
+    border: 10px;
+    border: #1fd394;
+    margin: 20px auto; /* Center these sections for consistency */
+    max-width: 960px;
 }
 
 .post {
@@ -66,13 +71,15 @@ body {
     margin-bottom: 2rem; /* Increased bottom margin for more spacing */
 }
 
-.post-title{
-    color: hsl(320, 38%, 35%); /* Consistent use of primary color */
+.post-title {
+    color: hsl(319, 63%, 17%); /* Consistent use of primary color */
     text-decoration: none; /* Removes underline from links */
     transition: color 0.3s ease, text-shadow 0.3s ease; /* Adjusted for balance */
+    font-size: 25px;
+
 }
 .post-title:hover, .post-title:focus {
-    color: #63afb1; /* Darker shade of blue on hover/focus for contrast */
+    color: #09575a; /* Darker shade of blue on hover/focus for contrast */
     text-shadow: 0px 0px 8px rgba(23, 171, 159, 0.7); /* Glowing effect on hover/focus */
   }
 
