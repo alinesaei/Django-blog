@@ -66,10 +66,15 @@ body {
     margin-bottom: 2rem; /* Increased bottom margin for more spacing */
 }
 
-.post-title {
+.post-title{
     color: hsl(320, 38%, 35%); /* Consistent use of primary color */
-    font-size: 1.75rem; /* Adjusted for balance */
+    text-decoration: none; /* Removes underline from links */
+    transition: color 0.3s ease, text-shadow 0.3s ease; /* Adjusted for balance */
 }
+.post-title:hover, .post-title:focus {
+    color: #63afb1; /* Darker shade of blue on hover/focus for contrast */
+    text-shadow: 0px 0px 8px rgba(23, 171, 159, 0.7); /* Glowing effect on hover/focus */
+  }
 
 .post-meta {
     color: #6c757d; /* Bootstrap secondary text color for consistency */
